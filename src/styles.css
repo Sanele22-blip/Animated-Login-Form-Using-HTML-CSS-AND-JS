@@ -16,7 +16,7 @@
     width: 400px;
     height: 500px;
     background: #000;
-    box-shadow: 0 0 50px lime;
+    box-shadow: 0 0 50px #0ef;
     border-radius: 20px;
     padding: 40px;
     overflow: hidden;
@@ -29,7 +29,7 @@
       filter: hue-rotate(360deg);
     }
   }
-  .form-container {
+  .form-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,23 +37,21 @@
     height: 100%;
     transition: 1s ease-in-out;
   }
-  
-  .container .form-container-sign-up {
+  .wrapper.active .form-container.sign-up {
+    transform: translateY(-450px);
+  }
+  .wrapper .form-container.sign-up {
     position: absolute;
     top: 450px;
     left: 0;
   }
-  .container.active .form-container-sign-up {
-    transform: translateY(-450px);
-  }
-
-  .container.active .form-container-login {
+  .wrapper.active .form-container.sign-in {
     transform: translateY(-450px);
   }
 
   h1 {
-    font-size: 32px;
-    color: black;
+    font-size: 30px;
+    color: #fff;
     text-align: center;
   }
   .input-container {
@@ -61,7 +59,7 @@
     margin: 30px 0;
     border-bottom: 2px solid #fff;
   }
-  
+
   .input-container label {
     position: absolute;
     top: 50%;
@@ -72,7 +70,6 @@
     pointer-events: none;
     transition: .5s;
   }
-
   .input-container input {
     width: 320px;
     height: 40px;
@@ -83,23 +80,26 @@
     border: none;
     outline: none;
   }
-  
   .input-container input:focus~label,
   .input-container input:valid~label {
     top: -5px;
   }
-  
-
-  .remember-me {
+  .remember {
     margin: -5px 0 15px 5px;
   }
-  
+  .remember label {
+    color: #fff;
+    font-size: 14px;
+  }
+  .remember label input {
+    accent-color: #0ef;
+  }
   button {
     position: relative;
     width: 100%;
     height: 40px;
-    background: lime;
-    box-shadow: 0 0 10px lime;
+    background: paleturquoise;
+    box-shadow: 0 0 10px paleturquoise;
     font-size: 16px;
     color: #000;
     font-weight: 500;
@@ -108,16 +108,16 @@
     border: none;
     outline: none;
   }
-  .sign-up-link {
+  .signUp-link {
     font-size: 14px;
     text-align: center;
     margin: 15px 0;
   }
-  .roscoe {
-    color:black;
+  .signUp-link p {
+    color: black;
   }
   .signUp-link p a {
-    color: purple;
+    color: lime;
     text-decoration: none;
     font-weight: 500;
   }
