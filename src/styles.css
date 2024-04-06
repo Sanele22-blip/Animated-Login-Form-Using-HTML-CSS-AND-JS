@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: black;
 }
 
 .container {
@@ -21,6 +22,15 @@ body {
     overflow: hidden;
 }
 
+.container:hover {
+    animation: animate 1s linear infinite;
+  }
+  @keyframes animate {
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -29,11 +39,25 @@ body {
     height: 100%;
 }
 
+.container.active .form-container-login {
+    transform: translateY(-450px);
+  }
+  .container .form-container-sign-up {
+    position: absolute;
+    top: 450px;
+    left: 0;
+  }
+  .container.active .form-container.sign-up {
+    transform: translateY(-450px);
+  }
+
 h1 {
     font-size: 30px;
     color: black;
     text-align: center;
 }
+
+
 
 .user-data {
         position: relative;
