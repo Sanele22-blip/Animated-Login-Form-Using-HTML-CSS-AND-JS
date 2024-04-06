@@ -86,3 +86,17 @@ button {
     border: none;
     outline: none;
   }
+
+.sign-up-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .roscoe {
+    color: black;
+  }
+  .sign-up-link a {
+    text-decoration: none;
+    color: purple;
+  }
